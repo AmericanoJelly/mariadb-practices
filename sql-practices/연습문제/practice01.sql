@@ -18,8 +18,9 @@ select concat(first_name, last_name) as 이름,
   
 -- 문제3.
 -- 여직원과 남직원은 각 각 몇 명이나 있나요?
-
-
+select count(gender) as count
+  from employees
+  group by gender;
 
 -- 문제4.
 -- 현재 근무하고 있는 직원 수는 몇 명입니까? (salaries 테이블을 사용합니다.)
@@ -27,7 +28,6 @@ select concat(first_name, last_name) as 이름,
 
 -- 문제5.
 -- 부서는 총 몇 개가 있나요?
-
 
 -- 문제6.
 -- 현재 부서 매니저는 몇 명이나 있나요?(역임 매너저는 제외)
