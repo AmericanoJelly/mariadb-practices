@@ -2,7 +2,11 @@
 
 -- 문제1.
 -- 사번이 10944인 사원의 이름은(전체 이름)
+select concat(first_name, last_name)as 사원이름
+	from employees 
+	where emp_no='10944';
 
+select *from employees;
 
 -- 문제2.
 -- 전체직원의 다음 정보를 조회하세요. 가장 선임부터 출력이 되도록 하세요. 출력은
