@@ -14,10 +14,10 @@ inner join \
  + ANSI/ISO SQL 1999 JOIN 표준문법
     - natural join (x)
     - join ~ using (x)
-    - join ~ on (o)
+    - join ~ on (o) \
 outer join \
  + ANSI/ISO SQL 1999 JOIN 표준문법
-   left join ~ on
-   right join ~ on
-   full join ~ on (mysql에서는 지원안함)
+ + left join ~ on
+ + right join ~ on
+ + full join ~ on (mysql에서는 지원안함)
 
