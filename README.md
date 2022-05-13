@@ -8,5 +8,8 @@
  5)ORDER BY 
 
 inner join / outer join
+inner join\
+ + equi join
+ + ANSI/ISO SQL 1999 JOIN 표준문법
 
 
