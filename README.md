@@ -1,5 +1,6 @@
-## SQL(DML)
-### 1. SELECT: 기본, 집계, join, SubQuery
+# SQL(DML)
+## 1. SELECT: 기본, 집계, join, SubQuery
+
  6)SELECT \
  1)FROM \
  2)WHERE \
@@ -7,9 +8,14 @@
  4)HAVING \
  5)ORDER BY 
 
-inner join / outer join \
+#### inner join / outer join \
 inner join
  + equi join
  + ANSI/ISO SQL 1999 JOIN 표준문법
-
+    - natural join (x)
+    - join ~ using (x)
+    - join ~ on (o)
+outer join
+ + ANSI/ISO SQL 1999 JOIN 표준문법
+   join ~ on
 
