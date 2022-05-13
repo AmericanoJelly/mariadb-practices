@@ -1,7 +1,7 @@
 ## SQL(DML)
 ### 1) SELECT: 기본, 집계, join, SubQuery
 
-  SELECT
+   SELECT
  1. FROM
  2. WHERE
  3. GROUP BY
