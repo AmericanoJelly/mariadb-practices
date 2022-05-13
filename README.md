@@ -8,14 +8,16 @@
  4)HAVING \
  5)ORDER BY 
 
-#### inner join / outer join \
-inner join
+#### inner join / outer join
+inner join \
  + equi join
  + ANSI/ISO SQL 1999 JOIN 표준문법
     - natural join (x)
     - join ~ using (x)
     - join ~ on (o)
-outer join
+outer join \
  + ANSI/ISO SQL 1999 JOIN 표준문법
-   join ~ on
+   left join ~ on
+   right join ~ on
+   full join ~ on (mysql에서는 지원안함)
 
