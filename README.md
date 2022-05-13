@@ -1,7 +1,5 @@
-# mariadb-practices
-
 ## SQL(DML)
-1) SELECT: 기본, 집계, join, SubQuery
+### 1) SELECT: 기본, 집계, join, SubQuery
 
   SELECT
  1. FROM
