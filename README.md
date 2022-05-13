@@ -9,14 +9,14 @@
  5)ORDER BY 
 
 #### inner join / outer join
-inner join 
+#### inner join 
  + equi join
  + ANSI/ISO SQL 1999 JOIN 표준문법
     - natural join (x)
     - join ~ using (x)
     - join ~ on (o) \
      
- outer join 
+#### outer join 
  + ANSI/ISO SQL 1999 JOIN 표준문법
  + left join ~ on
  + right join ~ on
