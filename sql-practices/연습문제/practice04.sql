@@ -57,7 +57,7 @@ select 	e.emp_no 사번,
     
 -- 문제5.
 -- 현재, 평균연봉이 가장 높은 부서의 사원들의 사번, 이름, 직책, 연봉을 조회하고 연봉 순으로 출력하세요.
-select de.dept_name
+	select de.dept_name
 	from salaries s, dept_emp d, departments de
     where s.emp_no = d.emp_no
     and d.dept_no = de.dept_no
