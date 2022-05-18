@@ -12,6 +12,8 @@ values(null, '원수연');
 -- select author
 select * from author;
 
+select * from book;
+
 -- BookDao:insert
 -- insert into book values(null, '....', '재고있음', 1);
 
