@@ -9,9 +9,9 @@ import bookshop.vo.BookVo;
 public class BookDaoTest {
 
 	public static void main(String[] args) {
-		// testInsert();
+		 testInsert();
 		//testFindAll();
-		 testUpdate();
+		// testUpdate();
 	}
 	
 	private static void testUpdate() {
