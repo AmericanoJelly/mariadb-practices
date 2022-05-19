@@ -25,8 +25,10 @@ public class OrderTest {
 		OrderDao dao = new OrderDao();
 		OrderVo vo = new OrderVo();
 		
-		vo.setOrder_no("20220519-0001");
+		vo.setNo("20220519-0001");
 		vo.setAddr("센텀월드오피스텔");
+		vo.setCost(3000);
+		vo.setMember_no(1L);
 		dao.insert(vo);
 		
 

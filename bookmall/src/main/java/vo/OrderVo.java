@@ -1,38 +1,24 @@
 package vo;
 
 public class OrderVo {
-	private int no;
+	private String no;
+	private int cost;
 	private String addr;
-	private String order_no;
-	private int cart_no;
-	private int member_no;
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-	public int getPrice() {
-		return price;
-	}
-	public void setPrice(int price) {
-		this.price = price;
-	}
-	private String title;
-	private int count;
-	private int price;
+	private Long member_no;
+	private String name;
+	private String email;
 	
-	public int getNo() {
+	public String getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(String no) {
 		this.no = no;
+	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
 	}
 	public String getAddr() {
 		return addr;
@@ -40,29 +26,29 @@ public class OrderVo {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-	public String getOrder_no() {
-		return order_no;
-	}
-	public void setOrder_no(String order_no) {
-		this.order_no = order_no;
-	}
-	public int getCart_no() {
-		return cart_no;
-	}
-	public void setCart_no(int cart_no) {
-		this.cart_no = cart_no;
-	}
-	public int getMember_no() {
+	public Long getMember_no() {
 		return member_no;
 	}
-	public void setMember_no(int member_no) {
+	public void setMember_no(Long member_no) {
 		this.member_no = member_no;
+	}
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	@Override
 	public String toString() {
-		return "OrderVo [no=" + no + ", addr=" + addr + ", order_no=" + order_no + ", cart_no=" + cart_no
-				+ ", member_no=" + member_no + ", title=" + title + ", count=" + count + ", price=" + price + "]";
+		return "OrderVo [no=" + no + ", " + ", cost=" + cost + ", addr=" + addr + ", member_no="
+				+ member_no + ", name=" + name + ", email=" + email + "]";
 	}
-	
 		
 }

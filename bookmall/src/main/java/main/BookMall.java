@@ -62,10 +62,13 @@ public class BookMall {
 	}
 	
 	public static void displayOrderInfo() {
-		List<MemberVo> list = new MemberDao().findAll();
+		List<OrderVo> list = new OrderDao().findAll();
 		
-		for(MemberVo vo : list) {
-		System.out.println(vo.getOrder_no()+" "+vo.getName()+"("+vo.getEmail()+")"+vo.getPrice()+vo.getAddr());
+		for(OrderVo vo : list) {
+		System.out.println(vo.getNo()+" ");
+		System.out.println(vo.getName()+"("+vo.getEmail()+")");
+		System.out.println(vo.getCost());
+		System.out.println(vo.getAddr());
 		}
 		System.out.println("====================================");
 		
@@ -75,9 +78,7 @@ public class BookMall {
 		List<OrderVo> list = new OrderDao().findAll();
 		
 		for(OrderVo vo : list) {
-		System.out.println(vo.getNo()+" "+vo.getTitle()+" "+vo.getCount()+" "+vo.getPrice());
+	//	System.out.println(vo.getNo()+" "+vo.getTitle()+" "+vo.getCount()+" "+vo.getPrice());
 		}
-		System.out.println("====================================");
-		
 	}
 }

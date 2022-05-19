@@ -7,8 +7,8 @@ import vo.MemberVo;
 
 public class MemberTest {
 	public static void main(String[] args) {
-		//testInsert();
-		testFindAll();
+		testInsert();
+		//testFindAll();
 		// testUpdate();
 	}
 	

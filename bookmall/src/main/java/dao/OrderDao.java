@@ -19,10 +19,12 @@ public class OrderDao {
 		try {
 			connection = getConnection();
 			
-			String sql = "insert into orders values(null,?, ?, null)";
+			String sql = "insert into orders values(?, ?, ?, ?)";
 			pstmt = connection.prepareStatement(sql);
-			pstmt.setString(1, vo.getOrder_no());
+			pstmt.setString(1, vo.getNo());
 			pstmt.setString(2, vo.getAddr());
+			pstmt.setInt(3, vo.getCost());
+			pstmt.setLong(4, vo.getMember_no());
 	
 			int count = pstmt.executeUpdate();
 			result = count == 1;
@@ -61,16 +63,18 @@ public class OrderDao {
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				int no = rs.getInt(1);
-				String title = rs.getString(2);
-				int count = rs.getInt(3);
-				int price = rs.getInt(4);
+				String no = rs.getString(1);
+				String name = rs.getString(2);
+				String email = rs.getString(3);
+				int cost = rs.getInt(4);
+				String addr = rs.getString(5);
 				
 				OrderVo vo = new OrderVo();
 				vo.setNo(no);
-				vo.setTitle(title);
-				vo.setCount(count);
-				vo.setPrice(price);
+				vo.setName(name);
+				vo.setEmail(email);
+				vo.setCost(cost);
+				vo.setAddr(addr);
 		
 				result.add(vo);
 			}
