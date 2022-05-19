@@ -6,6 +6,9 @@ public class CartVo {
 	private int price;
 	private int member_no;
 	private int book_no;
+	private String name;
+	private String title;
+
 	public int getNo() {
 		return no;
 	}
@@ -37,12 +40,23 @@ public class CartVo {
 		this.book_no = book_no;
 	}
 	
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
 	@Override
 	public String toString() {
 		return "CartVo [no=" + no + ", count=" + count + ", price=" + price + ", member_no=" + member_no + ", book_no="
-				+ book_no + "]";
+				+ book_no + ", name=" + name + ", title=" + title + "]";
 	}
-	
-	
-	
+
 }

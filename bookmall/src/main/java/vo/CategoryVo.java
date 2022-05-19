@@ -1,13 +1,13 @@
 package vo;
 
 public class CategoryVo {
-	private int no;
+	private long no;
 	private String sort;
 	
-	public int getNo() {
+	public long getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(long no) {
 		this.no = no;
 	}
 	public String getSort() {

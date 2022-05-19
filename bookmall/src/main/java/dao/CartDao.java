@@ -3,7 +3,10 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import vo.CartVo;
 
@@ -41,6 +44,55 @@ public class CartDao {
 		}
 		return result;		
 		}
+	
+	public List<CartVo> findAll() {
+		List<CartVo> result = new ArrayList<>();
+		Connection connection = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			connection = getConnection();
+
+			String sql = " select c.name, b.title, a.count "
+					+ " from cart a, book b, member c "
+			    	+ " where a.book_no = b.no "
+			    	+ " and a.member_no = c.no";
+			pstmt = connection.prepareStatement(sql);			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				String name = rs.getString(1);
+				String title = rs.getString(2);
+				int count = rs.getInt(3);
+				
+				CartVo vo = new CartVo();
+				vo.setName(name);
+				vo.setTitle(title);
+				vo.setCount(count);
+				result.add(vo);
+			}
+		} catch (SQLException e) {
+			System.out.println("드라이버 로딩 실패:" + e);
+		} finally {
+			try {
+				if(rs != null) {
+					rs.close();
+				}
+				if(pstmt != null) {
+					pstmt.close();
+				}
+				if(connection != null) {
+					connection.close();
+				}
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		return result;		
+	}
+	
 
 	private Connection getConnection() throws SQLException {
 		Connection connection = null;

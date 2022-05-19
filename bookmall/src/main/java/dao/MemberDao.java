@@ -69,17 +69,20 @@ public class MemberDao {
 			connection = getConnection();
 
 			String sql =
-					  " select * "
-					+ " from member";
+					" select * "
+					+" from member";
 			pstmt = connection.prepareStatement(sql);			
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
 				int no = rs.getInt(1);
 				String name = rs.getString(2);
-				String phone = rs.getString(2);
-				String email = rs.getString(2);
-				String pw = rs.getString(2);
+				String phone = rs.getString(3);
+				String email = rs.getString(4);
+				String pw = rs.getString(5);
+//				int order_no = rs.getInt(6);
+//				int price = rs.getInt(7);
+//				String addr = rs.getString(8);
 				
 				MemberVo vo = new MemberVo();
 				vo.setNo(no);
@@ -87,6 +90,9 @@ public class MemberDao {
 				vo.setPhone(phone);
 				vo.setEmail(email);
 				vo.setPw(pw);
+//				vo.setOrder_no(order_no);
+//				vo.setPrice(price);
+//				vo.setAddr(addr);
 		
 				result.add(vo);
 			}

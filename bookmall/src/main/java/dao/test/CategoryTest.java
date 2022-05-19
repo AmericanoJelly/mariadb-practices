@@ -7,8 +7,8 @@ import vo.CategoryVo;
 
 public class CategoryTest {
 	public static void main(String[] args) {
-		// testInsert();
-		testFindAll();
+		testInsert();
+		//testFindAll();
 	}
 	
 	private static void testFindAll() {

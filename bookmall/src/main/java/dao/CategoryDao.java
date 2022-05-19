@@ -43,20 +43,6 @@ public class CategoryDao {
 		}
 		return result;		
 		}
-
-	private Connection getConnection() throws SQLException {
-		Connection connection = null;
-		
-		try {
-			Class.forName("org.mariadb.jdbc.Driver");
-			String url = "jdbc:mysql://192.168.10.38:3306/bookmall?charset=utf8";
-			connection = DriverManager.getConnection(url, "user1", "user1");
-		} catch (ClassNotFoundException e) {
-			System.out.println("드라이버 로딩 실패:" + e);
-		}
-		
-		return connection;
-	}
 	
 	public List<CategoryVo> findAll() {
 		List<CategoryVo> result = new ArrayList<>();
@@ -103,5 +89,21 @@ public class CategoryDao {
 		
 		return result;		
 	}
+	
+
+	private Connection getConnection() throws SQLException {
+		Connection connection = null;
+		
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+			String url = "jdbc:mysql://192.168.10.38:3306/bookmall?charset=utf8";
+			connection = DriverManager.getConnection(url, "user1", "user1");
+		} catch (ClassNotFoundException e) {
+			System.out.println("드라이버 로딩 실패:" + e);
+		}
+		
+		return connection;
+	}
+	
 	
 }

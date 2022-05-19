@@ -1,5 +1,7 @@
 package dao.test;
 
+import java.util.List;
+
 import dao.OrderDao;
 import vo.OrderVo;
 
@@ -7,9 +9,17 @@ public class OrderTest {
 	
 	public static void main(String[] args) {
 		testInsert();
-		//testFindAll();
-		// testUpdate();
+		testFindAll();
 	}
+	
+	private static void testFindAll() {
+		System.out.println("---Category select---");
+		List<OrderVo> list = new OrderDao().findAll();
+		for(OrderVo vo : list) {
+			System.out.println(vo);
+		}
+	}
+	
 	
 	public static void testInsert() {
 		OrderDao dao = new OrderDao();

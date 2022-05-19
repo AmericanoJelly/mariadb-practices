@@ -25,7 +25,7 @@ public class BookDao {
 			pstmt = connection.prepareStatement(sql);
 			pstmt.setString(1, vo.getTitle());
 			pstmt.setInt(2, vo.getPrice());
-			pstmt.setInt(3, vo.getCategory_no());
+			pstmt.setLong(3, vo.getCategory_no());
 			
 			int count = pstmt.executeUpdate();
 			result = count == 1;
@@ -55,23 +55,23 @@ public class BookDao {
 		try {
 			connection = getConnection();
 
-			String sql =
-					  " select no, title, price, category_no"
-					+ " from book";
+			String sql =  " select a.no, a.title, a.price, b.sort"
+						+ " from book a, category b"
+						+ " where a.category_no = b.no";
 			pstmt = connection.prepareStatement(sql);			
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				int no = rs.getInt(1);
+				long no = rs.getLong(1);
 				String title = rs.getString(2);
 				int price = rs.getInt(3);
-				int category_no = rs.getInt(4);
+				String sort = rs.getString(4);
 				
 				BookVo vo = new BookVo();
 				vo.setNo(no);
 				vo.setTitle(title);
 				vo.setPrice(price);
-				vo.setCategory_no(category_no);
+				vo.setSort(sort);
 				
 				result.add(vo);
 			}

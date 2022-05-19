@@ -1,13 +1,24 @@
 package dao.test;
 
+import java.util.List;
+
 import dao.CartDao;
 import vo.CartVo;
+
 
 public class CartTest {
 	public static void main(String[] args) {
 		testInsert();
 		//testFindAll();
 		// testUpdate();
+	}
+	
+	private static void testFindAll() {
+		System.out.println("---cart select---");
+		List<CartVo> list = new CartDao().findAll();
+		for(CartVo vo : list) {
+			System.out.println(vo);
+		}
 	}
 	
 	public static void testInsert() {
@@ -25,8 +36,6 @@ public class CartTest {
 		vo.setMember_no(1);
 		vo.setBook_no(2);
 		dao.insert(vo);
-		
-	
 		
 		System.out.println("cart insert");
 

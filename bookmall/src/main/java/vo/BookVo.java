@@ -1,15 +1,16 @@
 package vo;
 
 public class BookVo {
-	private int no;
+	private long no;
 	private String title;
 	private int price;
-	private int category_no;
+	private long category_no;
+	private String Sort;
 	
-	public int getNo() {
+	public long getNo() {
 		return no;
 	}
-	public void setNo(int no) {
+	public void setNo(long no) {
 		this.no = no;
 	}
 	public String getTitle() {
@@ -25,15 +26,22 @@ public class BookVo {
 		this.price = price;
 	}
 	
-	public int getCategory_no() {
+	public long getCategory_no() {
 		return category_no;
 	}
-	public void setCategory_no(int category_no) {
+	public void setCategory_no(long category_no) {
 		this.category_no = category_no;
+	}
+
+	public String getSort() {
+		return Sort;
+	}
+	public void setSort(String sort) {
+		Sort = sort;
 	}
 	@Override
 	public String toString() {
-		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + ", category_no=" + category_no + "]";
+		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + ", category_no=" + category_no + ", Sort="
+				+ Sort + "]";
 	}
-
 }

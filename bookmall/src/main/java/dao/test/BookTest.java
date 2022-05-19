@@ -7,9 +7,9 @@ import vo.BookVo;
 
 public class BookTest {
 	public static void main(String[] args) {
-		//testInsert();
-		testFindAll();
-		// testUpdate();
+		testInsert();
+		//testFindAll();
+		
 	}
 	
 	private static void testFindAll() {

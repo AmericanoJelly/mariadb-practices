@@ -33,7 +33,7 @@ public class MemberTest {
 		vo.setName("별나비");
 		vo.setPhone("01055895480");
 		vo.setEmail("yujinj704@gmail.com");
-		vo.setPw("0000");
+		vo.setPw("03300");
 		dao.insert(vo);
 		
 	
