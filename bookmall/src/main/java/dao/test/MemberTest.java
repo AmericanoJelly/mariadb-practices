@@ -1,13 +1,23 @@
 package dao.test;
 
+import java.util.List;
+
 import dao.MemberDao;
 import vo.MemberVo;
 
 public class MemberTest {
 	public static void main(String[] args) {
-		testInsert();
-		//testFindAll();
+		//testInsert();
+		testFindAll();
 		// testUpdate();
+	}
+	
+	private static void testFindAll() {
+		System.out.println("---Member select---");
+		List<MemberVo> list = new MemberDao().findAll();
+		for(MemberVo vo : list) {
+			System.out.println(vo);
+		}
 	}
 	
 	public static void testInsert() {

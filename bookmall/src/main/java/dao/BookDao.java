@@ -3,7 +3,10 @@ package dao;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import vo.BookVo;
 
@@ -42,6 +45,7 @@ public class BookDao {
 		}
 		return result;		
 		}
+	
 	public List<BookVo> findAll() {
 		List<BookVo> result = new ArrayList<>();
 		Connection connection = null;
@@ -52,24 +56,22 @@ public class BookDao {
 			connection = getConnection();
 
 			String sql =
-				"   select a.no, a.title, b.name, a.state_code" +
-				"     from book a, author b" +
-				"    where a.author_no = b.no" +
-				" order by no asc";
+					  " select no, title, price, category_no"
+					+ " from book";
 			pstmt = connection.prepareStatement(sql);			
 			rs = pstmt.executeQuery();
 			
 			while(rs.next()) {
-				Long no = rs.getLong(1);
+				int no = rs.getInt(1);
 				String title = rs.getString(2);
-				String authorName = rs.getString(3);
-				String stateCode = rs.getString(4);
+				int price = rs.getInt(3);
+				int category_no = rs.getInt(4);
 				
 				BookVo vo = new BookVo();
 				vo.setNo(no);
 				vo.setTitle(title);
-				vo.setAuthorName(authorName);
-				vo.setStateCode(stateCode);
+				vo.setPrice(price);
+				vo.setCategory_no(category_no);
 				
 				result.add(vo);
 			}

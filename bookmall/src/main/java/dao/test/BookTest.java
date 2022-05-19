@@ -1,15 +1,24 @@
 package dao.test;
 
+import java.util.List;
+
 import dao.BookDao;
 import vo.BookVo;
 
 public class BookTest {
 	public static void main(String[] args) {
-		testInsert();
-		//testFindAll();
+		//testInsert();
+		testFindAll();
 		// testUpdate();
 	}
 	
+	private static void testFindAll() {
+		System.out.println("---book select---");
+		List<BookVo> list = new BookDao().findAll();
+		for(BookVo vo : list) {
+			System.out.println(vo);
+		}
+	}
 	
 	public static void testInsert() {
 		BookDao dao = new BookDao();
