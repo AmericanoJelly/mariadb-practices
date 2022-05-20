@@ -75,10 +75,10 @@ public class BookMall {
 	}
 	
 	public static void displayOrderBookInfo() {
-		List<OrderVo> list = new OrderDao().findAll();
+		List<BookVo> list = new BookDao().findAll2();
 		
-		for(OrderVo vo : list) {
-	//	System.out.println(vo.getNo()+" "+vo.getTitle()+" "+vo.getCount()+" "+vo.getPrice());
+		for(BookVo vo : list) {
+		System.out.println(vo.getNo()+" "+vo.getTitle()+" "+vo.getCount()+" "+vo.getPrice());
 		}
 	}
 }

@@ -6,6 +6,8 @@ public class BookVo {
 	private int price;
 	private long category_no;
 	private String Sort;
+	private int cost;
+	private int count;
 	
 	public long getNo() {
 		return no;
@@ -39,9 +41,23 @@ public class BookVo {
 	public void setSort(String sort) {
 		Sort = sort;
 	}
+	public int getCost() {
+		return cost;
+	}
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
+	public int getCount() {
+		return count;
+	}
+	public void setCount(int count) {
+		this.count = count;
+	}
 	@Override
 	public String toString() {
 		return "BookVo [no=" + no + ", title=" + title + ", price=" + price + ", category_no=" + category_no + ", Sort="
-				+ Sort + "]";
+				+ Sort + ", cost=" + cost + ", count=" + count + "]";
 	}
+	
+	
 }
