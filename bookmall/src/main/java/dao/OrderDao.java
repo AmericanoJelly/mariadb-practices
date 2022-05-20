@@ -55,10 +55,9 @@ public class OrderDao {
 			connection = getConnection();
 
 			String sql =
-					" select b.no, c.title, b.count, b.price " 
-					+" from orders a, order_book b, book c"
-				    +" where a.no = b.order_no"
-				    +" and b.book_no = c.no";
+					   " select b.no, a.name, a.email, b.cost, b.addr "
+					 + " from member a, orders b "
+				     + " where a.no = b.member_no ";
 			pstmt = connection.prepareStatement(sql);			
 			rs = pstmt.executeQuery();
 			
