@@ -9,7 +9,7 @@ public class OrderTest {
 	
 	public static void main(String[] args) {
 		testInsert();
-		testFindAll();
+		//testFindAll();
 	}
 	
 	private static void testFindAll() {
@@ -26,7 +26,7 @@ public class OrderTest {
 		OrderVo vo = new OrderVo();
 		
 		vo.setNo("20220519-0001");
-		vo.setAddr("센텀월드오피스텔");
+		vo.setAddr("센텀월드");
 		vo.setCost(3000);
 		vo.setMember_no(1L);
 		dao.insert(vo);

@@ -6,12 +6,9 @@ public class MemberVo {
 	private String phone;
 	private String email;
 	private String pw;
-	public int getOrder_no() {
-		return order_no;
-	}
-	public void setOrder_no(int order_no) {
-		this.order_no = order_no;
-	}
+	private int price;
+	private String addr; 
+	
 	public int getPrice() {
 		return price;
 	}
@@ -24,10 +21,6 @@ public class MemberVo {
 	public void setAddr(String addr) {
 		this.addr = addr;
 	}
-
-	private int order_no;
-	private int price;
-	private String addr;
 	
 	public int getNo() {
 		return no;
@@ -62,7 +55,7 @@ public class MemberVo {
 	@Override
 	public String toString() {
 		return "MemberVo [no=" + no + ", name=" + name + ", phone=" + phone + ", email=" + email + ", pw=" + pw
-				+ ", order_no=" + order_no + ", price=" + price + ", addr=" + addr + "]";
+				+ ", price=" + price + ", addr=" + addr + "]";
 	}
 	
 }
